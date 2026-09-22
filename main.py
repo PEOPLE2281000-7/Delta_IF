@@ -9,5 +9,6 @@ import string
 print("=== Генератор паролей ===")
 
 length = int(input("Длина пароля: "))
-password = "".join(random.choice(string.ascii_letters) for _ in range(length))
+chars = string.ascii_letters + string.digits + string.punctuation
+password = "".join(random.choice(chars) for _ in range(length))
 print(f"Твой пароль: {password}")
