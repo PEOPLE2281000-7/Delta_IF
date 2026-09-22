@@ -6,9 +6,19 @@
 import random
 import string
 
-print("=== Генератор паролей ===")
+ALPHABETS = {
+    "1": string.ascii_letters,
+    "2": string.ascii_letters + string.digits,
+    "3": string.ascii_letters + string.digits + string.punctuation,
+}
 
+print("=== Генератор паролей ===")
+print("1. Буквы")
+print("2. Буквы и цифры")
+print("3. Все символы")
+
+mode = input("Выбери набор: ")
 length = int(input("Длина пароля: "))
-chars = string.ascii_letters + string.digits + string.punctuation
-password = "".join(random.choice(chars) for _ in range(length))
+
+password = "".join(random.choice(ALPHABETS[mode]) for _ in range(length))
 print(f"Твой пароль: {password}")
