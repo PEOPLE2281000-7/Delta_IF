@@ -1,0 +1,8 @@
+# Сгенерированные и личные данные (в git их не коммитим)
+passwords.txt
+data/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
